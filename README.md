@@ -17,5 +17,5 @@
 - [Contains Number](dan_contains_number/dan_contains_number.cpp)
 - [Compress String](dan_compress_string/dan_compress_string.cpp)
 
-# Bonus:
+### Bonus:
 - [Project Euler problem 92](project_euler_92/project_euler_92.cpp)
