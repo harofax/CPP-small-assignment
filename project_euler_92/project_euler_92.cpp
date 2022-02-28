@@ -1,5 +1,16 @@
-// project_euler_92.cpp : This file contains the 'main' function. Program execution begins and ends there.
+﻿// project_euler_92.cpp : This file contains the 'main' function. Program execution begins and ends there.
 //
+
+// A number chain is created by continuously adding the square of the digits in a number to form a new number until it has been seen before.
+//
+// For example,
+//
+// 44 → 32 → 13 → 10 → 1 → 1
+// 85 → 89 → 145 → 42 → 20 → 4 → 16 → 37 → 58 → 89
+//
+// Therefore any chain that arrives at 1 or 89 will become stuck in an endless loop.What is most amazing is that EVERY starting number will eventually arrive at 1 or 89.
+//
+// How many starting numbers below ten million will arrive at 89 ?
 
 #include <iostream>
 #include "project_euler_92.h"
@@ -9,14 +20,14 @@ int main()
 {
 	using namespace std;
 
-	int count = 10000000;
+	constexpr int count = 10000000;
 
-	auto start = chrono::system_clock::now();
-	int result = solver(count);
-	auto end = chrono::system_clock::now();
+	const auto start = chrono::system_clock::now();
+	const int result = solver(count);
+	const auto end = chrono::system_clock::now();
 
 
-	auto elapsed =
+	const auto elapsed =
 		std::chrono::duration_cast<std::chrono::milliseconds>(end - start);
 
 
@@ -42,7 +53,7 @@ int step(int num)
 	return sum;
 }
 
-int solver(int count)
+int solver(const int count)
 {
 	int num_89s {0};
 
